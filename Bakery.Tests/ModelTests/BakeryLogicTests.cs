@@ -22,6 +22,18 @@ namespace BakeryObjects.Tests
       new Bread(2);
       Assert.AreNotEqual(3, Bread.breadCounter);
     }
+    [TestMethod]
+    public void getPrice_returnsValues_int()
+    {
+      new Bread(2);
+      Assert.AreEqual(4, Bread.getPrice());
+    }
+    [TestMethod]
+    public void getPrice_appliesDeals_int()
+    {
+      new Bread(3);
+      Assert.AreEqual(4, Bread.getPrice());
+    }
   } 
   [TestClass]
   public class PastryTests:IDisposable
