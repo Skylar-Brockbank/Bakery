@@ -26,13 +26,13 @@ namespace BakeryObjects.Tests
     public void getPrice_returnsValues_int()
     {
       new Bread(2);
-      Assert.AreEqual(4, Bread.getPrice());
+      Assert.AreEqual(10, Bread.getPrice());
     }
     [TestMethod]
     public void getPrice_appliesDeals_int()
     {
       new Bread(3);
-      Assert.AreEqual(4, Bread.getPrice());
+      Assert.AreEqual(10, Bread.getPrice());
     }
   } 
   [TestClass]
@@ -53,6 +53,16 @@ namespace BakeryObjects.Tests
     {
       new Pastry(4);
       Assert.AreNotEqual(3, Pastry.pastryCounter);
+    }
+    [TestMethod]
+    public void getPrice_returnsValues_int()
+    {
+      new Pastry(2);
+      Assert.AreEqual(3, Pastry.getPrice());
+      new Pastry(2);
+      Assert.AreEqual(7, Pastry.getPrice());
+      new Pastry(1);
+      Assert.AreEqual(9, Pastry.getPrice());
     }
   }
 }

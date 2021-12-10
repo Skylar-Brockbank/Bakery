@@ -5,7 +5,7 @@ namespace BakeryObjects
   public class Bread
   {
     public static int breadCounter;
-    private static int breadPrice = 2;
+    private static int breadPrice = 5;
 
     public Bread(int quantity)
     {
@@ -33,6 +33,14 @@ namespace BakeryObjects
     public static void resetValues()
     {
       pastryCounter = 0;
+    }
+    public static int getPrice()
+    {
+      if(pastryCounter==6)
+      {
+        return 10;
+      }
+      return (2*pastryCounter)-1;
     }
   }
 }
