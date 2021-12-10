@@ -5,7 +5,7 @@ namespace BakeryObjects
   public class Bread
   {
     public static int breadCounter;
-    private static int breadPrice = 5;
+    public static int breadPrice { get; } = 5 ;
 
     public Bread(int quantity)
     {
