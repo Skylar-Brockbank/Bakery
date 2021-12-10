@@ -10,6 +10,10 @@ namespace BakeryObjects
     {
       breadCounter += quantity;
     }
+    public static void resetValues()
+    {
+      breadCounter = 0;
+    }
   }
   public class Pastry
   {
@@ -17,6 +21,10 @@ namespace BakeryObjects
     public Pastry(int quantity)
     {
       pastryCounter += quantity;
+    }
+    public static void resetValues()
+    {
+      pastryCounter = 0;
     }
   }
 }
