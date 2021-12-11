@@ -6,7 +6,6 @@ namespace BakeryObjects
   {
     public static int breadCounter;
     public static int breadPrice= 5 ;
-
     public Bread(int quantity)
     {
       breadCounter += quantity;
@@ -23,8 +22,6 @@ namespace BakeryObjects
       return breadPrice*breadCounter;
     }
   }
-
-  
   public class Pastry
   {
     public static int pastryCounter;
@@ -48,7 +45,6 @@ namespace BakeryObjects
         return 2;
       }
       return (pastryCounter+(pastryCounter-1));
-      
     }
   }
 }

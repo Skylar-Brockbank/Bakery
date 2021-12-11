@@ -7,7 +7,6 @@ namespace Bakery
   {
     public static void Main()
     {
-      Console.Clear();
       Console.WriteLine("$$\\      $$\\           $$\\                                             $$\\ ");
       Console.WriteLine("$$ | $\\  $$ |          $$ |                                            $$ |");
       Console.WriteLine("$$ |$$$\\ $$ | $$$$$$\\  $$ | $$$$$$$\\  $$$$$$\\  $$$$$$\\$$$$\\   $$$$$$\\  $$ |");
@@ -30,7 +29,6 @@ namespace Bakery
         addItems();
       } else if(userInput == "2")
       {
-        //Checkout Interface
         checkOut();
       }else{
         Console.WriteLine("I'm sorry to say, that's not a valid option");
@@ -38,8 +36,6 @@ namespace Bakery
       }
     }
     public static void addItems(){
-      Console.Clear();
-      //offer all the things you can buy and ask for a quantity
       Console.WriteLine("1.) Bread " + Bread.breadPrice + "$/loaf (=!= All Bread is Buy 2 get 1 FREE =!=)");
       Console.WriteLine("2.) Pastry (they start at 2$/Pastry, but you get a bulk discount, at an inconsistent rate... good luck)");
       string userChoice = Console.ReadLine();
@@ -79,14 +75,11 @@ namespace Bakery
     }
     public static void checkOut()
     {
-      Console.Clear();
-      //get prices for each item
       int totalBreadCost = Bread.getPrice();
       int breadSavings = (Bread.breadCounter*Bread.breadPrice)-totalBreadCost;
       int totalPastryCost = Pastry.getPrice();
       int pastrySavings = (Pastry.pastryCounter*2)-totalPastryCost;
       int totalCost = totalBreadCost+totalPastryCost;
-      //list items with their prices
       if(Bread.breadCounter>0){
         Console.WriteLine(Bread.breadCounter + "X Bread $" + totalBreadCost);
       }
@@ -100,17 +93,12 @@ namespace Bakery
         
         Console.WriteLine((Bread.breadCounter+Pastry.pastryCounter) +" Items Total: $" + totalCost);
       }
-
       Console.WriteLine(" ");
-      //Console.WriteLine("_____________");
       Console.WriteLine("press any key to continue");
       Console.ReadKey();
       Bread.resetValues();
       Pastry.resetValues();
-      
       Main();
-      //list total
-      //clear vairables
     }
   }
 }
