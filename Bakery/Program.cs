@@ -17,6 +17,7 @@ namespace Bakery
       Console.WriteLine("$$  /   \\$$ |\\$$$$$$$\\ $$ |\\$$$$$$$\\ \\$$$$$$  |$$ | $$ | $$ |\\$$$$$$$\\ $$\\ ");
       Console.WriteLine("\\__/     \\__| \\_______|\\__| \\_______| \\______/ \\__| \\__| \\__| \\_______|\\__|");
       Console.WriteLine("===========================================================================");
+      Console.WriteLine("To Pierre's Bakery!");
       Console.WriteLine(" ");
       Console.WriteLine("1.) View Menu Items");
       Console.WriteLine("2.) Checkout");
@@ -81,20 +82,22 @@ namespace Bakery
       Console.Clear();
       //get prices for each item
       int totalBreadCost = Bread.getPrice();
+      int breadSavings = (Bread.breadCounter*Bread.breadPrice)-totalBreadCost;
       int totalPastryCost = Pastry.getPrice();
-      Console.WriteLine(totalBreadCost+" "+totalPastryCost);
+      int pastrySavings = (Pastry.pastryCounter*2)-totalPastryCost;
       int totalCost = totalBreadCost+totalPastryCost;
       //list items with their prices
       if(Bread.breadCounter>0){
         Console.WriteLine(Bread.breadCounter + "X Bread $" + totalBreadCost);
       }
-      if(Pastry.pastryCounter>0){
-        Console.WriteLine(Pastry.pastryCounter + "X Pastry $" + totalPastryCost);
-      }
       if(Bread.breadCounter<1 && Pastry.pastryCounter<1){
         Console.WriteLine("There's nothing in your cart");
       }else{
         Console.WriteLine("=======================");
+        if(breadSavings>0){
+          Console.WriteLine("    You saved $" + breadSavings + " on bread!");
+        }
+        
         Console.WriteLine((Bread.breadCounter+Pastry.pastryCounter) +" Items Total: $" + totalCost);
       }
 

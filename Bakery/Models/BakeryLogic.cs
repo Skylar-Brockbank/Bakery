@@ -44,8 +44,10 @@ namespace BakeryObjects
       if(pastryCounter==6)
       {
         return 10;
+      }else if(pastryCounter==1){
+        return 2;
       }
-      return (2*pastryCounter)-1;
+      return (pastryCounter+(pastryCounter-1));
       
     }
   }
