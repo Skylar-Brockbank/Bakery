@@ -23,6 +23,8 @@ namespace BakeryObjects
       return breadPrice*breadCounter;
     }
   }
+
+  
   public class Pastry
   {
     public static int pastryCounter;
@@ -36,11 +38,15 @@ namespace BakeryObjects
     }
     public static int getPrice()
     {
+      if(pastryCounter<1){
+        return 0;
+      }
       if(pastryCounter==6)
       {
         return 10;
       }
       return (2*pastryCounter)-1;
+      
     }
   }
 }

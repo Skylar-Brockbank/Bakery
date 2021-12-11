@@ -39,7 +39,7 @@ namespace Bakery
     public static void addItems(){
       Console.Clear();
       //offer all the things you can buy and ask for a quantity
-      Console.WriteLine("1.) Bread " + Bread.breadPrice + "$/loaf");
+      Console.WriteLine("1.) Bread " + Bread.breadPrice + "$/loaf (=!= All Bread is Buy 2 get 1 FREE =!=)");
       Console.WriteLine("2.) Pastry (they start at 2$/Pastry, but you get a bulk discount, at an inconsistent rate... good luck)");
       string userChoice = Console.ReadLine();
       Console.WriteLine("__________________");
@@ -82,6 +82,7 @@ namespace Bakery
       //get prices for each item
       int totalBreadCost = Bread.getPrice();
       int totalPastryCost = Pastry.getPrice();
+      Console.WriteLine(totalBreadCost+" "+totalPastryCost);
       int totalCost = totalBreadCost+totalPastryCost;
       //list items with their prices
       if(Bread.breadCounter>0){
