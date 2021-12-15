@@ -4,8 +4,8 @@ namespace BakeryObjects
 {
   public class Bread
   {
-    public static int breadCounter;
-    public static int breadPrice= 5 ;
+    public static int breadCounter { get; set; }
+    public static int breadPrice { get; set; } = 5;
     public Bread(int quantity)
     {
       breadCounter += quantity;
