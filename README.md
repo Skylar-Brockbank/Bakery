@@ -8,6 +8,7 @@
 
 * _C#.NET_
 * _MS Test_
+* _dotnet test_
 
 ## Description
 
@@ -19,6 +20,8 @@ _given the type and quantities of baked good you've purchased, this program will
 * _Extract the contents of the zip file to a folder on your machine_
 * _Navigate to the Bakery folder in the project directory using your terminal of choice_
 * _run the program using `dotnet run`_
+
+* _if you want to test, navigate to the Bakery.Tests directory and run the `dotnet test` command_
 
 * _alternatively you can [clone this repository](https://www.learnhowtoprogram.com/introduction-to-programming/git-html-and-css/practice-github-remote-repositories) from Git Hub_
 
